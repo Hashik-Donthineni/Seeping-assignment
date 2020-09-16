@@ -79,7 +79,7 @@ class _SleepingProcessHomeState extends State<SleepingProcessHome> {
                   ),
                 ),
               ),
-              SpinKitFadingCircle(
+              SpinKitSquareCircle(
                 color: Colors.deepOrange,
                 size: 25.0,
               ),
