@@ -1,16 +1,41 @@
-# sleeping_assignment
+# Readme
+Working [video](https://youtu.be/vpGDtWfNk8Y) of the project. I added a loading animation to notice any kind of blocking in the UI thread.
 
-todo_sleep
+Hello Equalitie team! Peter told me the assignment would be the same for me on the 14th at midnight (my time), so I started working on the 15th. I am submitting this a early, in 2 days time (on 16th) in hopes that you folks would let me know if anything needs to be improved before the deadline, like the UI/architecture or the code. There isn't any fancy UI and architecture, just a functional piece of code designed to do the task at hand. Please reach out to me if you folks think I need to implement any architecture, design patter or any UI requirements, before or after the deadline.
 
-## Getting Started
+For the most part, the assignment is straight forward. I love C, albeit my knowledge is a bit rusty as it has been years the last time I used it, it still is my fav language, and didn't cause any issues. The flutter part of the assignment is straight forward. However, the thing that is a little challenging here is the callback.
 
-This project is a starting point for a Flutter application.
+# Goals:
+- Don't spawn new threads/isolates in Dart as that would kill the purpose of launching another thread to sleep in native.
+- Take callback from C code and remove the process from the list in the UI.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Approach 1: [Failed]
+Passing a Dart function and calling the function with function pointer is a straight forward approach but that will not work as the thread is outside the MainUI thread or the isolate it will error with "Cannot invoke native callback outside an isolate."
+``` c
+struct thread_info{
+    int64_t id;
+    int64_t seconds;
+    void (*func_ptr)(void);
+};
+void *thread_sleep(void *args){
+    void (*function_pointer)();
+    ...
+    function_pointer = ((struct thread_info*) args) -> func_ptr;
+    ...
+    sleep(seconds);
+    (void) (* function_pointer)(id);
+}
+void start_task(int64_t id, int64_t seconds, void (*callback)(int64_t)){
+    ...
+    info ->func_ptr = callback;
+    ...
+    pthread_create(&threads[id], NULL, &thread_sleep, (void *) info);
+}
+```
+## Approach 2: [Works] Implemented in this test project
+Using socket to communicate b/w threads. The relation is 1:N Dart will be listenening to events on Socket while each thread in C will have a Socket to communicate with the Dart's Socket.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Other potential approaches that I didn't try but might work for a callback:
+- I suppose we could use a polling timer and tailor the code to notify Dart-isolate to give control to C callback so that it would run on the main UI thread/isolate.
+
