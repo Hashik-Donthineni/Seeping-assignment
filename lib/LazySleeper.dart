@@ -1,6 +1,8 @@
 import 'dart:ffi' as ffi;
 import 'dart:io';
 
+import 'dart:isolate';
+
 //Bindings
 typedef start_task = ffi.Void Function(ffi.Int64, ffi.Int64);
 

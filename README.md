@@ -36,6 +36,4 @@ void start_task(int64_t id, int64_t seconds, void (*callback)(int64_t)){
 ## Approach 2: [Works] Implemented in this test project
 Using socket to communicate b/w threads. The relation is 1:N Dart will be listenening to events on Socket while each thread in C will have a Socket to communicate with the Dart's Socket.
 
-## Other potential approaches that I didn't try but might work for a callback:
-- I suppose we could use a polling timer and tailor the code to notify Dart-isolate to give control to C callback so that it would run on the main UI thread/isolate.
-
+### Workng on native port now
