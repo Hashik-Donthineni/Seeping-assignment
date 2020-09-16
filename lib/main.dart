@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'LazySleeper.dart';
 
 void main() {
@@ -44,9 +44,9 @@ class _SleepingProcessHomeState extends State<SleepingProcessHome> {
       ),
       body: SingleChildScrollView(
           child: Column(
-            children:
+        children:
             processList.map((process) => getRow(process.toString())).toList(),
-          )),
+      )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Second argument is the sleep time.
@@ -77,6 +77,10 @@ class _SleepingProcessHomeState extends State<SleepingProcessHome> {
                     color: Colors.grey[600],
                   ),
                 ),
+              ),
+              SpinKitFadingCircle(
+                color: Colors.deepOrange,
+                size: 25.0,
               ),
             ],
           ),
