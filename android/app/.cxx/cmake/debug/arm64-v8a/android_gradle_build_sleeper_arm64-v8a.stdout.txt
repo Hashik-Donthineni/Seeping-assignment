@@ -1,0 +1,10 @@
+[1/2] Building C object CMakeFiles/sleeper.dir/sleeper.c.o
+/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/sleeper.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/sleeper.c:77:5: warning: implicit declaration of function 'pthread_create' is invalid in C99 [-Wimplicit-function-declaration]
+    pthread_create(&threads[id], NULL, &thread_sleep, (void *) info);
+    ^
+/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/sleeper.c:77:5: warning: declaration of built-in function 'pthread_create' requires inclusion of the header <pthread.h> [-Wbuiltin-requires-header]
+3 warnings generated.
+[2/2] Linking C shared library /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsleeper.so

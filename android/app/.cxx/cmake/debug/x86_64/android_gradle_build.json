@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/debug/x86_64 --target clean"
+	],
+	"libraries" : 
+	{
+		"sleeper-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sleeper",
+			"buildCommand" : "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/debug/x86_64 --target sleeper",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dsleeper_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/sleeper.c",
+					"workingDirectory" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/debug/x86_64"
+				}
+			],
+			"output" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86_64/libsleeper.so",
+			"toolchain" : "2470933546528267572"
+		}
+	},
+	"toolchains" : 
+	{
+		"2470933546528267572" : 
+		{
+			"cCompilerExecutable" : "/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}
