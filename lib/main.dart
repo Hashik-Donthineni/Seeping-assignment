@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 import 'LazySleeper.dart';
 
 void main() {
@@ -71,7 +72,7 @@ class _SleepingProcessHomeState extends State<SleepingProcessHome> {
             children: <Widget>[
               Center(
                 child: Text(
-                  "Process ID:$s",
+                  "Process ID: $s",
                   style: TextStyle(
                     fontSize: 18.0,
                     color: Colors.grey[600],
