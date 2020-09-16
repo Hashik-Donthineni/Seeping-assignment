@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'LazySleeper.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -19,10 +21,16 @@ class SleepingProcessHome extends StatefulWidget {
 class _SleepingProcessHomeState extends State<SleepingProcessHome> {
   List<int> processList = [];
   int count = 0;
+  LazySleeper bindings;
 
   @override
   void initState() {
-    //TODO: Initialize the sleeper
+    bindings = LazySleeper((int id) {
+      print("Removing process with ID: $id\n");
+      setState(() {
+        processList.remove(id);
+      });
+    });
     super.initState();
   }
 
@@ -41,9 +49,10 @@ class _SleepingProcessHomeState extends State<SleepingProcessHome> {
           )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //TODO:Start the sleeper
+          // Second argument is the sleep time.
+          bindings.startSleeping(++count, 5);
           setState(() {
-            processList.add(++count);
+            processList.add(count);
           });
         },
         child: Icon(Icons.add),
