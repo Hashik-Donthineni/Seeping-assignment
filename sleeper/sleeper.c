@@ -8,6 +8,9 @@
 #include <netinet/in.h>
 #include "include/dart_api.h"
 #include "include/dart_native_api.h"
+#include "include/dart_api_dl.h"
+#include "include/dart_api_dl.c"
+#include "include/dart_tools_api.h"
 
 #define N 25
 

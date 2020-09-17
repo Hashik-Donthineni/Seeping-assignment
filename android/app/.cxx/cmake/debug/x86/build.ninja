@@ -78,8 +78,44 @@ build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/int
   TARGET_FILE = /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so
   TARGET_PDB = sleeper.so.dbg
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target include
+
+build include/CMakeFiles/include.dir/dart_api_dl.c.o: C_COMPILER__include /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/dart_api_dl.c
+  DEFINES = -Dinclude_EXPORTS
+  DEP_FILE = include/CMakeFiles/include.dir/dart_api_dl.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/dart_api_dl.c
+  OBJECT_DIR = include/CMakeFiles/include.dir
+  OBJECT_FILE_DIR = include/CMakeFiles/include.dir
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target include
+
+
+#############################################
+# Link the shared library /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so
+
+build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so: C_SHARED_LIBRARY_LINKER__include include/CMakeFiles/include.dir/dart_api_dl.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info
+  LINK_FLAGS = -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
+  LINK_LIBRARIES = -latomic -lm
+  OBJECT_DIR = include/CMakeFiles/include.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libinclude.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so
+  TARGET_PDB = include.so.dbg
+# =============================================================================
 # Target aliases.
 
+build include: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so
+build libinclude.so: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so
 build libsleeper.so: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so
 build sleeper: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so
 # =============================================================================
@@ -87,13 +123,19 @@ build sleeper: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignmen
 
 # =============================================================================
 # =============================================================================
+
+#############################################
+# Folder: /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include
+
+build  include/all: phony include
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # The main all target.
 
-build all: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so
+build all: phony /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so
 
 #############################################
 # Make the all target the default.
@@ -103,13 +145,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx
+build build.ninja: RERUN_CMAKE | /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx: phony
+build /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake /home/hashik/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/android.toolchain.cmake /home/hashik/Android/Sdk/ndk/21.0.6113669/build/cmake/platforms.cmake /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake: phony
 
 #############################################
 # Clean all the built files.

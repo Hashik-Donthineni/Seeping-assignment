@@ -7,8 +7,8 @@
 #ifndef RUNTIME_INCLUDE_DART_API_DL_H_
 #define RUNTIME_INCLUDE_DART_API_DL_H_
 
-#include "include/dart_api.h"
-#include "include/dart_native_api.h"
+#include "dart_api.h"
+#include "dart_native_api.h"
 
 /** \mainpage Dynamically Linked Dart API
  *

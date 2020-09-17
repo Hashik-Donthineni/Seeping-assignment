@@ -1,0 +1,40 @@
+
+{
+	"buildFiles" : 
+	[
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/CMakeTmp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/CMakeTmp --target clean"
+	],
+	"cppFileExtensions" : [ "cxx" ],
+	"libraries" : 
+	{
+		"cmTC_2e8b3-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "cmTC_2e8b3",
+			"buildCommand" : "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/CMakeTmp --target cmTC_2e8b3",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot    -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fPIE   -std=c++98  -c ",
+					"src" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/feature_tests.cxx",
+					"workingDirectory" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/CMakeTmp"
+				}
+			],
+			"output" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86_64/CMakeFiles/CMakeTmp/cmTC_2e8b3",
+			"toolchain" : "2470933546528267572"
+		}
+	},
+	"toolchains" : 
+	{
+		"2470933546528267572" : 
+		{
+			"cCompilerExecutable" : "/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+		}
+	}
+}

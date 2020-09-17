@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86 --target clean"
+  ],
+  "libraries": {
+    "sleeper-Release-x86": {
+      "artifactName": "sleeper",
+      "buildCommand": "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86 --target sleeper",
+      "abi": "x86",
+      "output": "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/release/obj/x86/libsleeper.so"
+    }
+  }
+}

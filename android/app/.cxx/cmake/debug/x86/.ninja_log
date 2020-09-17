@@ -1,3 +1,20 @@
 # ninja log v5
 0	38	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
 39	55	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+0	36	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
+36	44	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+0	24	0	include/CMakeFiles/include.dir/dart_api_dl.c.o	978770c6b6e7a21b
+24	33	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so	6303486bb0cf7297
+0	50	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
+50	62	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+0	27	0	include/CMakeFiles/include.dir/dart_api_dl.c.o	978770c6b6e7a21b
+27	36	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so	6303486bb0cf7297
+0	57	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
+57	74	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+1	37	0	include/CMakeFiles/include.dir/dart_api_dl.c.o	978770c6b6e7a21b
+37	47	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so	6303486bb0cf7297
+0	13	0	build.ninja	6b5eec7270a1fc9f
+0	40	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
+40	48	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+0	23	0	include/CMakeFiles/include.dir/dart_api_dl.c.o	978770c6b6e7a21b
+23	32	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libinclude.so	6303486bb0cf7297

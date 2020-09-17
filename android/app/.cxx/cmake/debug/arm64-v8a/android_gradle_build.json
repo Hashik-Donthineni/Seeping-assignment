@@ -2,7 +2,8 @@
 {
 	"buildFiles" : 
 	[
-		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt"
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt",
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/CMakeLists.txt"
 	],
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
@@ -11,6 +12,24 @@
 	],
 	"libraries" : 
 	{
+		"include-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "include",
+			"buildCommand" : "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/debug/arm64-v8a --target include",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinclude_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/dart_api_dl.c",
+					"workingDirectory" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/arm64-v8a/libinclude.so",
+			"toolchain" : "2470933546528267572"
+		},
 		"sleeper-Debug-arm64-v8a" : 
 		{
 			"abi" : "arm64-v8a",

@@ -4,9 +4,9 @@
  * BSD-style license that can be found in the LICENSE file.
  */
 
-#include "include/dart_api_dl.h"
-#include "include/dart_version.h"
-#include "include/internal/dart_api_dl_impl.h"
+#include "dart_api_dl.h"
+#include "dart_version.h"
+#include "internal/dart_api_dl_impl.h"
 
 #include <string.h>
 
