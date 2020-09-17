@@ -1,16 +1,20 @@
 import 'dart:ffi' as ffi;
 import 'dart:ffi';
 
+import 'dart:isolate';
+
 //Bindings
-typedef start_task = ffi.Void Function(ffi.Int64, ffi.Int64);
+typedef start_task = ffi.Void Function(ffi.Int64, ffi.Int64, ffi.Int64);
 
 ffi.DynamicLibrary library = loadSleeperLibrary("sleeper");
-final void Function(int, int) startTask =
+final void Function(int, int, int) startTask =
     library.lookup<ffi.NativeFunction<start_task>>('start_task').asFunction();
 
 final initializeApi = library.lookupFunction<
     ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
     int Function(Pointer<Void>)>("init");
+
+ReceivePort receivePort;
 
 class LazySleeper {
   // Callback to main
@@ -21,11 +25,16 @@ class LazySleeper {
     if (initializeApi(NativeApi.initializeApiDLData) != 0) {
       print("Failed to initialize native API");
     }
+
+    receivePort = ReceivePort();
+    receivePort.listen((message) {
+      print(message.toString());
+    });
   }
 
   void startSleeping(int id, int time) {
     print("Starting task: ID: $id for $time seconds");
-    startTask(id, time);
+    startTask(id, time, receivePort.sendPort.nativePort);
   }
 }
 
