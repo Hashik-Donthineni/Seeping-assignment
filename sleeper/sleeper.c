@@ -40,9 +40,10 @@ void *thread_sleep(void *args) {
 
     // Building the message
     Dart_CObject message;
-    message.value.as_int64 = id;
+    message.type = Dart_CObject_kInt64;
+    message.value.as_int64 =  id;
 
-    // Sending the message
+    // Sending the message through port.
     Dart_PostCObject_DL(native_port, &message);
 }
 
