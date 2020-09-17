@@ -1,6 +1,5 @@
 import 'dart:ffi' as ffi;
 import 'dart:ffi';
-
 import 'dart:isolate';
 
 //Bindings
@@ -28,6 +27,7 @@ class LazySleeper {
 
     receivePort = ReceivePort();
     receivePort.listen((message) {
+      // Sending a callback to remove the process from the list.
       callBack(message);
     });
   }

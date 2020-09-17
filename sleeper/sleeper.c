@@ -22,7 +22,7 @@ pthread_t threads[N];
 struct thread_info {
     int64_t id; //Thread ID
     int64_t seconds; //No.of seconds sleep
-    Dart_Port native_port;
+    Dart_Port native_port; //Dart native port to send data
 };
 
 /**
@@ -62,6 +62,12 @@ void start_task(int64_t id, int64_t seconds, int64_t port) {
     pthread_create(&threads[id], NULL, &thread_sleep, (void *) info);
 }
 
+/**
+ * Initializing the native API.
+ *
+ * @param data NativeApi.initializeApiDLData
+ * @return
+ */
 intptr_t init(void *data){
     return Dart_InitializeApiDL((Dart_InitializeParams *) data);
 }
