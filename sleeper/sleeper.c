@@ -43,7 +43,7 @@ void *thread_sleep(void *args) {
     message.value.as_int64 = id;
 
     // Sending the message
-    Dart_PostCObject(native_port, &message);
+    Dart_PostCObject_DL(native_port, &message);
 }
 
 /**
