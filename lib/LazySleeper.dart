@@ -28,7 +28,7 @@ class LazySleeper {
 
     receivePort = ReceivePort();
     receivePort.listen((message) {
-      print(message.toString());
+      callBack(message);
     });
   }
 
