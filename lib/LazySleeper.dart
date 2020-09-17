@@ -1,7 +1,5 @@
 import 'dart:ffi' as ffi;
-import 'dart:io';
-
-import 'dart:isolate';
+import 'dart:ffi';
 
 //Bindings
 typedef start_task = ffi.Void Function(ffi.Int64, ffi.Int64);
@@ -10,24 +8,19 @@ ffi.DynamicLibrary library = loadSleeperLibrary("sleeper");
 final void Function(int, int) startTask =
     library.lookup<ffi.NativeFunction<start_task>>('start_task').asFunction();
 
+final initializeApi = library.lookupFunction<
+    ffi.IntPtr Function(ffi.Pointer<ffi.Void>),
+    int Function(Pointer<Void>)>("init");
+
 class LazySleeper {
   // Callback to main
   Function callBack;
 
   // ignore: missing_return
   LazySleeper(this.callBack) {
-    // Initiating and listening on the Socket.
-    RawDatagramSocket.bind(InternetAddress.anyIPv4, 4444)
-        .then((RawDatagramSocket communicationSocket) {
-      communicationSocket.listen((RawSocketEvent e) {
-        Datagram datagram = communicationSocket.receive();
-        if (datagram == null) return;
-
-        int processID =
-            int.parse(new String.fromCharCodes(datagram.data).trim());
-        callBack(processID);
-      });
-    });
+    if (initializeApi(NativeApi.initializeApiDLData) != 0) {
+      print("Failed to initialize native API");
+    }
   }
 
   void startSleeping(int id, int time) {

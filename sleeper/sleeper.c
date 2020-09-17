@@ -6,11 +6,14 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
+
 #include "include/dart_api.h"
-#include "include/dart_native_api.h"
-#include "include/dart_api_dl.h"
 #include "include/dart_api_dl.c"
+#include "include/dart_api_dl.h"
 #include "include/dart_tools_api.h"
+#include "include/dart_version.h"
+#include "include/dart_native_api.h"
+#include "include/internal/dart_api_dl_impl.h"
 
 #define N 25
 
@@ -79,4 +82,8 @@ void start_task(int64_t id, int64_t seconds) {
     info->id = id;
     info->seconds = seconds;
     pthread_create(&threads[id], NULL, &thread_sleep, (void *) info);
+}
+
+intptr_t init(void *data){
+    return Dart_InitializeApiDL((Dart_InitializeParams *) data);
 }
