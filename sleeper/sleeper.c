@@ -7,13 +7,9 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
-#include "include/dart_api.h"
 #include "include/dart_api_dl.c"
 #include "include/dart_api_dl.h"
-#include "include/dart_tools_api.h"
-#include "include/dart_version.h"
 #include "include/dart_native_api.h"
-#include "include/internal/dart_api_dl_impl.h"
 
 #define N 25
 
