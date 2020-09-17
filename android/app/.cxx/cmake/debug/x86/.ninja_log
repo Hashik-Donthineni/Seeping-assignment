@@ -1,5 +1,3 @@
 # ninja log v5
-0	44	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
-44	57	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
-1	54	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
-55	111	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
+0	38	0	CMakeFiles/sleeper.dir/sleeper.c.o	26cbef52b2ca610f
+39	55	0	/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/debug/obj/x86/libsleeper.so	4d71418d2a8ebebb
