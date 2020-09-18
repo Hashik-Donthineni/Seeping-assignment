@@ -11,10 +11,6 @@
 #include "include/dart_api_dl.h"
 #include "include/dart_native_api.h"
 
-#define N 25
-
-pthread_t threads[N];
-
 struct thread_info {
     int64_t id; //Thread ID
     int64_t seconds; //No.of seconds sleep
@@ -54,11 +50,12 @@ void *thread_sleep(void *args) {
  */
 void start_task(int64_t id, int64_t seconds, int64_t port) {
     struct thread_info *info = (struct thread_info *) calloc(1, sizeof(*info));
+    pthread_t thread_id;
 
     info->id = id;
     info->seconds = seconds;
     info->native_port = (Dart_Port) port;
-    pthread_create(&threads[id], NULL, &thread_sleep, (void *) info);
+    pthread_create(&thread_id, NULL, &thread_sleep, (void *) info);
 }
 
 /**
