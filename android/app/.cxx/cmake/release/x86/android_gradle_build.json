@@ -2,7 +2,8 @@
 {
 	"buildFiles" : 
 	[
-		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt"
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/CMakeLists.txt",
+		"/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/CMakeLists.txt"
 	],
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
@@ -11,6 +12,24 @@
 	],
 	"libraries" : 
 	{
+		"include-Release-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "include",
+			"buildCommand" : "/home/hashik/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86 --target include",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android16 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dinclude_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/sleeper/include/dart_api_dl.c",
+					"workingDirectory" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/android/app/.cxx/cmake/release/x86"
+				}
+			],
+			"output" : "/home/hashik/StudioProjects/flutter_apps/sleeping_assignment/build/app/intermediates/cmake/release/obj/x86/libinclude.so",
+			"toolchain" : "2470933546528267572"
+		},
 		"sleeper-Release-x86" : 
 		{
 			"abi" : "x86",

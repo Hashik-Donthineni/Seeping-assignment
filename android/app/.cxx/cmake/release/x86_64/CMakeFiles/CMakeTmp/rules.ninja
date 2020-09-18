@@ -20,21 +20,21 @@ rule CUSTOM_COMMAND
 
 
 #############################################
-# Rule for compiling CXX files.
+# Rule for compiling C files.
 
-rule CXX_COMPILER__cmTC_2e8b3
+rule C_COMPILER__cmTC_c2647
   depfile = $DEP_FILE
   deps = gcc
-  command = /home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot  $DEFINES $INCLUDES $FLAGS -o $out -c $IN_ABS
-  description = Building CXX object $out
+  command = /home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot $DEFINES $INCLUDES $FLAGS -o $out   -c $IN_ABS
+  description = Building C object $out
 
 
 #############################################
-# Rule for linking CXX executable.
+# Rule for linking C executable.
 
-rule CXX_EXECUTABLE_LINKER__cmTC_2e8b3
-  command = $PRE_LINK && /home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
-  description = Linking CXX executable $TARGET_FILE
+rule C_EXECUTABLE_LINKER__cmTC_c2647
+  command = $PRE_LINK && /home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/bin/clang  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/hashik/Android/Sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/linux-x86_64/sysroot $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
 

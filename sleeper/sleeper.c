@@ -31,6 +31,9 @@ void *thread_sleep(void *args) {
     int64_t seconds = ((struct thread_info *) args)->seconds;
     Dart_Port native_port = ((struct thread_info *) args)->native_port;
 
+    //Freeing the memory for "info" struct created in start_task.
+    free((struct thread_info *) args);
+
     // Sleeping for given no.of seconds passed from the Dart code to native code.
     sleep(seconds);
 
