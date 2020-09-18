@@ -17,12 +17,13 @@ struct thread_info {
  * @param args packed with ID, Seconds
  */
 void *thread_sleep(void *args) {
-    int64_t id = ((struct thread_info *) args)->id;
-    int64_t seconds = ((struct thread_info *) args)->seconds;
-    Dart_Port native_port = ((struct thread_info *) args)->native_port;
+    struct thread_info *infot = (struct thread_info *) args;
+    int64_t id = infot-> id;
+    int64_t seconds = infot-> seconds;
+    Dart_Port native_port = infot-> native_port;
 
-    //Freeing the memory for "info" struct created in start_task.
-    free((struct thread_info *) args);
+    //Freeing the memory for 'info' struct created in start_task.
+    free(infot);
 
     // Sleeping for given no.of seconds passed from the Dart code to native code.
     sleep(seconds);
@@ -49,6 +50,8 @@ void start_task(int64_t id, int64_t seconds, int64_t port) {
     info->id = id;
     info->seconds = seconds;
     info->native_port = (Dart_Port) port;
+
+    // Discarding the id as we aren't using the ID for waiting or for any other purpose.
     pthread_create(&thread_id, NULL, &thread_sleep, (void *) info);
 }
 
