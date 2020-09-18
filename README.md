@@ -40,7 +40,7 @@ void start_task(int64_t id, int64_t seconds, void (*callback)(int64_t)){
 Using socket to communicate b/w threads. The relation is 1:N Dart will be listenening to events on Socket while each thread in C will have a Socket to communicate with the Dart's Socket.
 
 ## Approach 3: [Works | Suggested] Using the Dart Native Port
-## IMPORTANT: Check out "nativeport" branch for this implementation.
+### Important: Check out "nativeport" branch for this implementation.
 - Passing the ReceivePort of dart (as NativePort)
 - Setting listener of ReceivePort 
 - Using native APIs `Dart_PostCObject_DL` to send the data back to Dart
