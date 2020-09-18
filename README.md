@@ -1,9 +1,12 @@
 # Readme
 Working [video](https://youtu.be/vpGDtWfNk8Y) of the project. I added a loading animation to notice any kind of blocking in the UI thread.
+NOTE: This video is taken using the apporach 2. Approach 3 ('nativeport' branch) is preferred and it works the same, but faster.
 
-Hello Equalitie team! Peter told me the assignment would be the same for me on the 14th at midnight (my time), so I started working on the 15th. I am submitting this a early, in 2 days time (on 16th) in hopes that you folks would let me know if anything needs to be improved before the deadline, like the UI/architecture or the code. There isn't any fancy UI and architecture, just a functional piece of code designed to do the task at hand. Please reach out to me if you folks think I need to implement any architecture, design patter or any UI requirements, before or after the deadline.
+There isn't any fancy UI and architecture, just a functional piece of code designed to do the task at hand. Please reach out to me if you folks think I need to implement any architecture, design patter or any UI requirements, before or after the deadline.
 
 For the most part, the assignment is straight forward. I love C, albeit my knowledge is a bit rusty as it has been years the last time I used it, it still is my fav language, and didn't cause any issues. The flutter part of the assignment is straight forward. However, the thing that is a little challenging here is the callback.
+
+Also, feel free to reach out if there are any issues in building the project or anything, I tested this multiple times and it's working well.
 
 # Goals:
 - Don't spawn new threads/isolates in Dart as that would kill the purpose of launching another thread to sleep in native.
@@ -43,3 +46,8 @@ Using socket to communicate b/w threads. The relation is 1:N Dart will be listen
 - Using native APIs `Dart_PostCObject_DL` to send the data back to Dart
 
 ## Approach 4: [Not Implemented] Polling C from Dart to see if the data is available.
+
+
+# Thank you for your time!  
+
+Hashik
